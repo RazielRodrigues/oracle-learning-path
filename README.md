@@ -1,4 +1,4 @@
-## Faculdade de tecnologia de Bauru:
+# 					       Faculdade de tecnologia de Bauru
 ## Documentação programação avançada de banco de dados com PL/SQL
 
 ### LABORATORIO DE DESENVOLVIMENTO DE BANCO DE DADOS IV
