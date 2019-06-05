@@ -1,0 +1,49 @@
+create or replace 
+FUNCTION FUNC_INSPESSOA(P_NOME IN VARCHAR2, P_SALARIO IN NUMBER)
+
+RETURN NUMBER
+
+IS
+
+  RET NUMBER(3) := 0;
+  V_COD PESSOA.ID%TYPE;
+  VQTDE NUMBER(1);
+
+BEGIN
+
+  IF P_NOME IS NOT NULL THEN
+    
+    IF LENGTH(P_NOME) <= 220 THEN
+    
+      SELECT MAX(ID)+1 INTO V_COD FROM PESSOA;
+      SELECT COUNT(*) INTO VQTDE FROM PESSOA
+      WHERE TRANSLATE(UPPER(NOME)),'ÁÂÃÀÄ','AAAAA'
+      = TRANSLATE(UPPER(P_NOME)),'','');
+        
+        IF VQTDE = 0 THEN
+
+          IF (P_SALARIO <= 999999999.99 AND >= 0) 
+                OR P_SALARIO IS NULL THEN
+             SELECT NVL(MAX(ID) ,0) +1 INTO V_COD FROM PESSOA;
+             INSERT INTO PESSOA(ID,NOME, SALARIO) VALUES(V_COD,P_NOME, P_SALARIO);
+             
+             COMMIT;
+          ELSE;
+            RET := -997; -- MENOR QUE ZERO OU MAIOR QUE O LIMITE
+          END IF
+
+        ELSE
+          RET := -997; -- MENOR QUE ZERO OU MAIOR QUE O LIMITE
+        END IF;
+    
+    ELSE
+        RET := -998; -- NOMES IGUAIS
+    END IF
+
+  ELSE
+    RET := -999; -- NUMERO NULO
+  END IF;
+
+
+RETURN RET;
+END;
