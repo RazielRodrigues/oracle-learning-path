@@ -2,7 +2,8 @@
 ## Documentação programação avançada de banco de dados com PL/SQL
 
 ### LABORATORIO DE DESENVOLVIMENTO DE BANCO DE DADOS IV
-#### Orientador: Prof. Dr. Patricia Bellin
+#### Professor da matéria: Luiz alexandre
+#### Orientador LAB IV: Prof. Dr. Patricia Bellin
 #### Aluno: Raziel Miranda Rodrigues
 
 
