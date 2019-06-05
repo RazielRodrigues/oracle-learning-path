@@ -1,8 +1,8 @@
-## Documentação programação avançada de banco de dados com PL/SQL
+## Documentação programação avançada de banco de dados com PL/SQL - Faculdade de tecnologia de Bauru
 
 ### LABORATORIO DE DESENVOLVIMENTO DE BANCO DE DADOS IV
-#### Prof. Dr. Patricia Bellin
-#### Raziel Miranda Rodrigues
+#### Orientador: Prof. Dr. Patricia Bellin
+#### Aluno: Raziel Miranda Rodrigues
 
 
 ### INDICE
